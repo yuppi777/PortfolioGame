@@ -5,15 +5,7 @@ using UnityEngine;
 public class PlayerCore : MonoBehaviour
 {
     [SerializeField]
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("プレイヤーの動きのスクリプト")]
+    private PlayerMover playerMover;
+    
 }
