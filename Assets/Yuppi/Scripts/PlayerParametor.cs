@@ -4,6 +4,7 @@ using UnityEngine;
 
 public struct PlayerParametor 
 {
-    public float PlayerMoveSpeed { get; }
+    public float PlayerMoveSpeed { get; set; }
+    public float PlayerJumpPower { get; set; }
     
 }
