@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMover : MonoBehaviour
+namespace Player.Mover
 {
-    Rigidbody rb;
-    float x;
-    float z;
-    private void Start()
+    public class PlayerMover : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody>();
-        
+        Rigidbody Rb;
+        float X;
+        float Z;
+
+        public void OnInitialize()
+        {
+            Rb = GetComponent<Rigidbody>();
+
+        }
+
+        public void PlayerMove(float moveSpeed)
+        {
+            X = Input.GetAxisRaw("Horizontal");
+            Z = Input.GetAxisRaw("Vertical");
+            Rb.velocity = new Vector3(X, 0, Z) * moveSpeed;
+        }
+
     }
-    public void PlayerMove(float moveSpeed)
-    {
-        x = Input.GetAxisRaw("Horizontal");
-        z = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector3(x, 0, z) * moveSpeed;
-    }
-    
 }

@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player.Mover;
 
 public class PlayerCore : MonoBehaviour
 {
     [SerializeField]
     [Header("プレイヤーの動きのスクリプト")]
-    private PlayerMover playerMover;
+    private PlayerMover PlayerMover;
 
-    private PlayerParametor playerParametor;
+    private PlayerParametor PlayerParametor;
+
+    private void Start()
+    {
+        PlayerMover.OnInitialize();
+    }
 
     private void Update()
     {
-        playerMover.PlayerMove(playerParametor.PlayerMoveSpeed);
+        PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
     }
 }
