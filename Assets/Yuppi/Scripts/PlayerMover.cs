@@ -22,12 +22,6 @@ namespace Player.Mover
             Z = Input.GetAxisRaw("Vertical");
             Rb.velocity = new Vector3(X, 0, Z) * moveSpeed;
         }
-        public void PlayerJump(float jumPower)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Rb.AddForce(transform.up * jumPower, ForceMode.Impulse);
-            }
-        } 
+
     }
 }

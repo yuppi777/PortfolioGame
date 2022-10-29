@@ -14,13 +14,10 @@ public class PlayerCore : MonoBehaviour
     private void Start()
     {
         PlayerMover.OnInitialize();
-        PlayerParametor.PlayerMoveSpeed = 8f;
-        PlayerParametor.PlayerJumpPower = 80f;
     }
 
     private void Update()
     {
         PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
-        PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
     }
 }
