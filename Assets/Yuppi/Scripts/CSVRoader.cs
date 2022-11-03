@@ -15,7 +15,7 @@ public class CSVRoader : MonoBehaviour
     //[SerializeField] private GameObject Adbentya;
     List<string[]> CsvDate = new List<string[]>();
     int TextKey = 0;
-    public string ToScene;
+    
 
 
 
@@ -51,7 +51,7 @@ public class CSVRoader : MonoBehaviour
         }
 
        
-        TitleBack();
+        
     }
 
 
@@ -61,8 +61,4 @@ public class CSVRoader : MonoBehaviour
     }
 
    
-   public void TitleBack()
-    {
-        SceneManager.LoadScene(ToScene);
-    }
 }
