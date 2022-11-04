@@ -50,7 +50,7 @@ public class CSVRoader : MonoBehaviour
             yield return null;
         }
 
-       
+        KitazzumeOriginalSceneManager.Instance.SceneUnloadAddtive("TestScene");
         
     }
 
