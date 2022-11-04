@@ -33,7 +33,14 @@ public class PlayerCore : MonoBehaviour
         PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
     }
 
-   
-   
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Commpanion" && Input.GetKeyDown(KeyCode.P))
+        {
+            KitazzumeOriginalSceneManager.Instance.SceneAdd("TestScene");
+        }
+      
+    }
+  
 
 }
