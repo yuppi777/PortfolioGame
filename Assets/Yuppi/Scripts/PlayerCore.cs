@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player.Mover;
+using UnityEngine.SceneManagement;
 
 public class PlayerCore : MonoBehaviour
 {
@@ -31,4 +32,8 @@ public class PlayerCore : MonoBehaviour
         PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
         PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
     }
+
+
+   
+
 }
