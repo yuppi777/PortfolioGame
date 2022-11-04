@@ -30,7 +30,7 @@ public class PlayerCore : MonoBehaviour
         PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
     }
 
-
+   
    
 
 }
