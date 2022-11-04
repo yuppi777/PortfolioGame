@@ -33,7 +33,7 @@ public class PlayerCore : MonoBehaviour
         PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
     }
 
-
+   
    
 
 }
