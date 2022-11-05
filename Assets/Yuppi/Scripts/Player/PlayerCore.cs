@@ -30,7 +30,7 @@ public class PlayerCore : MonoBehaviour
     {
         PlayerMover.OnInitialize();
         PlayerParametor.PlayerMoveSpeed = 8f;
-        PlayerParametor.PlayerJumpPower = 80f;
+        //PlayerParametor.PlayerJumpPower = 80f;
 
        
     }
@@ -38,7 +38,7 @@ public class PlayerCore : MonoBehaviour
     private void Update()
     {
         PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
-        PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
+        //PlayerMover.PlayerJump(PlayerParametor.PlayerJumpPower);
     }
 
     private void OnTriggerStay(Collider other)

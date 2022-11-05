@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextViewer: {fileID: 1562622064}
-  CsvFile: {fileID: 4900000, guid: 7a0e02e82af735e4aa76176ad8ec9d23, type: 3}
   NameTextViewer: {fileID: 886935763}
 --- !u!114 &372567929
 MonoBehaviour:
@@ -271,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a34d76b71c6cf9041b48211585b5b120, type: 2}
-  NowCommpanionSerif: {fileID: 0}
+  NowCommpanionSerif: {fileID: 4900000, guid: 7a0e02e82af735e4aa76176ad8ec9d23, type: 3}
 --- !u!1 &781316301
 GameObject:
   m_ObjectHideFlags: 0
