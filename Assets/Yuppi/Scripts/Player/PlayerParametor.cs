@@ -5,8 +5,5 @@ using UnityEngine;
 public struct PlayerParametor 
 {
     public float PlayerMoveSpeed { get; set; }
-    public float PlayerJumpPower { get; set; }
-
-    //ƒeƒXƒg‚Å‚·
     
 }
