@@ -5,13 +5,14 @@ using DG.Tweening;
 
 public class DungionGate : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Action();
         }
     }
+    
 
     void Action()
     {
@@ -20,6 +21,6 @@ public class DungionGate : MonoBehaviour
         pos.z += 48;
 
         Camera.main.transform.DOMove(pos,2);
-        GameObject.FindGameObjectWithTag("Player").transform.position += new Vector3(37,0,37);
+        GameObject.FindGameObjectWithTag("Player").transform.position += new Vector3(35,0,35);
     }
 }
