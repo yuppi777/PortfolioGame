@@ -6,14 +6,22 @@ using UnityEngine.SceneManagement;
 public class UseCase : MonoBehaviour
 {
     [SerializeField] PlayerCore PlayerCore;
-    [SerializeField] AdventureCore AdventureCore;
+    //[SerializeField] AdventureCore AdventureCore;
 
-    private void OnTriggerStay(Collider other)
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Commpanion" && Input.GetKeyDown(KeyCode.P))
+    //    {
+    //        SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
+    //    }
+
+    //}
+
+    private void Update()
     {
-        if (other.gameObject.tag == "Commpanion" && Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
-        }
-
+        AdventureCore.Instance.NowCommpanionName = PlayerCore.NowCommpanionName;
     }
+
+
+
 }

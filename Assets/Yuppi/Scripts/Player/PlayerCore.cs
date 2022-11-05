@@ -19,12 +19,20 @@ public class PlayerCore : MonoBehaviour
 
     private PlayerParametor PlayerParametor;
 
+    public string NowCommpanionName;
 
+    private void Awake()
+    {
+        /*ƒeƒXƒg*/
+        SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
+    }
     private void Start()
     {
         PlayerMover.OnInitialize();
         PlayerParametor.PlayerMoveSpeed = 8f;
         PlayerParametor.PlayerJumpPower = 80f;
+
+       
     }
 
     private void Update()
@@ -37,10 +45,13 @@ public class PlayerCore : MonoBehaviour
     {
         if (other.gameObject.tag == "Commpanion" && Input.GetKeyDown(KeyCode.P))
         {
-            KitazzumeOriginalSceneManager.Instance.SceneAdd("TestScene");
+           
+           var name  =  other.GetComponent<MyCommpanion>();
+            NowCommpanionName = name.MyName;
+            //SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
         }
-      
+
     }
-  
+
 
 }
