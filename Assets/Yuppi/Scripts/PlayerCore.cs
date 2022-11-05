@@ -23,9 +23,10 @@ public class PlayerCore : MonoBehaviour
     private void Start()
     {
         PlayerMover.OnInitialize();
+        PlayerParametor.PlayerMoveSpeed = 5;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         PlayerMover.PlayerMove(PlayerParametor.PlayerMoveSpeed);
     }
