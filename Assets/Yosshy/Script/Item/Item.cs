@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] ItemNameEnum ItemName;
+    public enum ItemNameEnum
     {
-        
+        Tree,
+        Stone
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
+
