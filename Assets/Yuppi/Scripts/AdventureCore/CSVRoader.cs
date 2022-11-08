@@ -9,19 +9,26 @@ using UnityEngine.SceneManagement;
 public class CSVRoader : MonoBehaviour
 {
     [SerializeField] private Text TextViewer;
-    [SerializeField] private TextAsset CsvFile;
+    //[SerializeField] private TextAsset CsvFile;
     [SerializeField] private Text NameTextViewer;
 
     //[SerializeField] private GameObject Adbentya;
     List<string[]> CsvDate = new List<string[]>();
     int TextKey = 0;
-    
+    public string ToScene;
 
 
 
-   public void CSVRoad()
+    //private void Start()
+    //{
+    //    CSVRoad();
+    //    StartCoroutine(TextView());
+    //    //StartCoroutine(NameTextView());
+    //}
+
+   public void CSVRoad(TextAsset textAsset)
     {
-        StringReader reader = new StringReader(CsvFile.text);
+        StringReader reader = new StringReader(textAsset.text);
 
         while (reader.Peek() != -1)
         {
@@ -49,8 +56,8 @@ public class CSVRoader : MonoBehaviour
 
             yield return null;
         }
-
         KitazzumeOriginalSceneManager.Instance.SceneUnloadAddtive("TestScene");
+        FalseAdventya();
         
     }
 
@@ -60,5 +67,9 @@ public class CSVRoader : MonoBehaviour
         TextKey += 1;
     }
 
+   public void FalseAdventya()
+    {
+        //Adbentya.SetActive(false);
+    }
    
 }
