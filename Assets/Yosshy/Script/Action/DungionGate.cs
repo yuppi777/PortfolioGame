@@ -17,8 +17,8 @@ public class DungionGate : MonoBehaviour
     void Action()
     {
         var pos = Camera.main.transform.position;
-        pos.x += 48;
-        pos.z += 48;
+        pos.x += 47;
+        pos.z += 47;
 
         Camera.main.transform.DOMove(pos,2);
         GameObject.FindGameObjectWithTag("Player").transform.position += new Vector3(35,0,35);

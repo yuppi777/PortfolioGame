@@ -8,28 +8,31 @@ public class PlayerPresenter : BasePlayer
     MyPlayerAnimator Animator;
     MyPlayerMover Mover;
     PlayerModel Model;
+    IInputEventProvider InputEventProvider;
 
     protected override void OnInitialize()
     {
         Animator = GetComponent<MyPlayerAnimator>();
         Mover = GetComponent<MyPlayerMover>();
+        InputEventProvider = GetComponent<IInputEventProvider>();
         Model = new PlayerModel();
 
-        Model.UpdateObservable
-            .Where(x => Model.Horizontal() != 0 || Model.Vertical() != 0)
+        InputEventProvider.OnInitialize();
+
+        InputEventProvider.MoveDirection
             .Subscribe(x =>
             {
-                Mover.Move(Model.Speed, Model.Horizontal(), Model.Vertical());
+                Mover.Move(Model.Speed,x);
                 Animator.Walk = true;
             });
 
-        Model.UpdateObservable
-            .Where(x => Model.Horizontal() == 0 && Model.Vertical() == 0)
+        InputEventProvider.IsMove
+            .Where(x => x == false)
             .Subscribe(x => Animator.Walk = false);
 
 
-       Model.JumpObservable
-            .Where(x => Model.Jump())
+        InputEventProvider.Jump
+            .Where(x => x == true)
             .Subscribe(x => Mover.Jump(Model.JumpPower));
     }
 }
