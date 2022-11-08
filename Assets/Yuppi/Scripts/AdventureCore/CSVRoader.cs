@@ -9,19 +9,26 @@ using UnityEngine.SceneManagement;
 public class CSVRoader : MonoBehaviour
 {
     [SerializeField] private Text TextViewer;
-    //[SerializeField] private TextAsset CsvFile;
+    [SerializeField] private TextAsset CsvFile;
     [SerializeField] private Text NameTextViewer;
 
     //[SerializeField] private GameObject Adbentya;
     List<string[]> CsvDate = new List<string[]>();
     int TextKey = 0;
-    
+    public string ToScene;
 
 
 
-   public void CSVRoad(TextAsset nowCommpanionSerif)
+    //private void Start()
+    //{
+    //    CSVRoad();
+    //    StartCoroutine(TextView());
+    //    //StartCoroutine(NameTextView());
+    //}
+
+   public void CSVRoad()
     {
-        StringReader reader = new StringReader(nowCommpanionSerif.text);
+        StringReader reader = new StringReader(CsvFile.text);
 
         while (reader.Peek() != -1)
         {
@@ -38,9 +45,6 @@ public class CSVRoader : MonoBehaviour
             TextViewer.text = " ";
             TextViewer.DOText(CsvDate[TextKey][0], 0.5f);
             NameTextViewer.text = CsvDate[TextKey][1];
-
-            KitazzumeOriginalSceneManager.Instance.CommpanionName = CsvDate[TextKey][1];//シーンマネージャーのコンパニオンネームに代入
-
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
 
             if (TextKey == CsvDate.Count - 1)
@@ -52,8 +56,8 @@ public class CSVRoader : MonoBehaviour
 
             yield return null;
         }
-
         KitazzumeOriginalSceneManager.Instance.SceneUnloadAddtive("TestScene");
+        FalseAdventya();
         
     }
 
@@ -63,5 +67,9 @@ public class CSVRoader : MonoBehaviour
         TextKey += 1;
     }
 
+   public void FalseAdventya()
+    {
+        //Adbentya.SetActive(false);
+    }
    
 }

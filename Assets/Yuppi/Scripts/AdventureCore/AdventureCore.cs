@@ -12,9 +12,11 @@ public class AdventureCore : SingletonMonoBehaviour<AdventureCore>
     
     private void Start()
     {
-        SelectCommpanion.CommpanionSelect(NowCommpanionName);
+        DontDestroyOnLoad(this.gameObject);
 
-       CSVRoader.CSVRoad(SelectCommpanion.NowCommpanionSerif);
+        //SelectCommpanion.CommpanionSelect(NowCommpanionName);
+
+       CSVRoader.CSVRoad();
         StartCoroutine(CSVRoader.TextView());
     }
 

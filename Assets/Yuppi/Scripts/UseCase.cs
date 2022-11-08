@@ -19,7 +19,7 @@ public class UseCase : MonoBehaviour
 
     private void Update()
     {
-        AdventureCore.Instance.NowCommpanionName = PlayerCore.NowCommpanionName;
+        //AdventureCore.Instance.NowCommpanionName = PlayerCore.NowCommpanionName;
     }
 
 

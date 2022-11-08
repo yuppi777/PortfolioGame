@@ -24,7 +24,7 @@ public class PlayerCore : MonoBehaviour
     private void Awake()
     {
         /*ƒeƒXƒg*/
-        SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
     }
     private void Start()
     {
@@ -48,7 +48,7 @@ public class PlayerCore : MonoBehaviour
            
            var name  =  other.GetComponent<MyCommpanion>();
             NowCommpanionName = name.MyName;
-            //SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene("TestScene", LoadSceneMode.Additive);
         }
 
     }

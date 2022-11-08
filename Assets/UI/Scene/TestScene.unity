@@ -158,7 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextViewer: {fileID: 1562622064}
+  CsvFile: {fileID: 4900000, guid: 7a0e02e82af735e4aa76176ad8ec9d23, type: 3}
   NameTextViewer: {fileID: 886935763}
+  ToScene: 
 --- !u!114 &372567929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d45790d4386df3d4c98572a50335c5e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4df566fc8553f54e8960e62cc6a7243, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
