@@ -6,7 +6,22 @@ using UnityEngine.SceneManagement;
 public class UseCase : MonoBehaviour
 {
     [SerializeField] PlayerCore PlayerCore;
-    //[SerializeField] AdventureCore AdventureCore;
+                      
+     
+    [SerializeField] AdventureCore AdventureCore;
+
+
+    private void Awake()
+    {
+        PlayerCore = GameObject.Find("Player").GetComponent<PlayerCore>();
+        AdventureCore.NowCommpanionName = PlayerCore.NowCommpanionName;
+    }
+    private void Start()
+    {
+        
+        
+    }
+
 
     //private void OnTriggerStay(Collider other)
     //{
@@ -19,7 +34,7 @@ public class UseCase : MonoBehaviour
 
     private void Update()
     {
-        //AdventureCore.Instance.NowCommpanionName = PlayerCore.NowCommpanionName;
+        //AdventureCore.NowCommpanionName = PlayerCore.NowCommpanionName;
     }
 
 

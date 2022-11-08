@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class CSVRoader : MonoBehaviour
 {
     [SerializeField] private Text TextViewer;
-    [SerializeField] private TextAsset CsvFile;
+    //[SerializeField] private TextAsset CsvFile;
     [SerializeField] private Text NameTextViewer;
 
     //[SerializeField] private GameObject Adbentya;
@@ -26,9 +26,9 @@ public class CSVRoader : MonoBehaviour
     //    //StartCoroutine(NameTextView());
     //}
 
-   public void CSVRoad()
+   public void CSVRoad(TextAsset textAsset)
     {
-        StringReader reader = new StringReader(CsvFile.text);
+        StringReader reader = new StringReader(textAsset.text);
 
         while (reader.Peek() != -1)
         {

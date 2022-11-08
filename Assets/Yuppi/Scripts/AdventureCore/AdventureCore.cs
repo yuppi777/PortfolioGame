@@ -3,20 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AdventureCore : SingletonMonoBehaviour<AdventureCore>
+public class AdventureCore :MonoBehaviour
 {
     [SerializeField] CSVRoader CSVRoader;
-    [SerializeField] SelectCommpanion SelectCommpanion;
+    [SerializeField] SelectCommpanion selectCommpanion;
 
     public string NowCommpanionName;
-    
+
+    private void Awake()
+    {
+        //DontDestroyOnLoad(this.gameObject);
+
+        
+    }
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        selectCommpanion.CommpanionSelect(NowCommpanionName);
 
-        //SelectCommpanion.CommpanionSelect(NowCommpanionName);
+        Debug.Log(NowCommpanionName);
 
-       CSVRoader.CSVRoad();
+
+        if (selectCommpanion.NowCommpanionSerif != null)
+        {
+            Debug.Log("ê¨å˜");
+
+        }
+
+       CSVRoader.CSVRoad(selectCommpanion.NowCommpanionSerif);
         StartCoroutine(CSVRoader.TextView());
     }
 
