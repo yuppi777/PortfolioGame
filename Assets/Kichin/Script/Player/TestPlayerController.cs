@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 public class TestPlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private TestPlayerMove PlayerMove;
+
+    private void Start()
     {
-        
+        Observable.EveryUpdate()
+            .Subscribe(_ => MoveUpdate()).AddTo(gameObject);
+            
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void MoveUpdate()
     {
-        
+        PlayerMove.Mover();
     }
+
+    
 }
