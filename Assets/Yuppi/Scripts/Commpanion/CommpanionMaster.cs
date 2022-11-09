@@ -16,9 +16,6 @@ public class CommpanionMaster : ScriptableObject
         Idol,
     }
 
- 
-  
-
 
     [Serializable]
     public class CommpanionMasterRecord

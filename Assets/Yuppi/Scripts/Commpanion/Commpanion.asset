@@ -19,5 +19,5 @@ MonoBehaviour:
     Post: 1
   - Name: Soyo
     sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
-    CsvFile: {fileID: 4900000, guid: be0802c1f74564e48a5d8e11775afa41, type: 3}
+    CsvFile: {fileID: 4900000, guid: cec53de06621d834fb75cd9e222b6729, type: 3}
     Post: 2
