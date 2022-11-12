@@ -18,7 +18,6 @@ public class MyPlayerMover : BasePlayer
     {
         var newvector = ((-Vector3.forward + new Vector3(1,0,0)) * direction.x +( Vector3.forward + new Vector3(1,0,0))* direction.z) * Time.deltaTime;
         PlayerRb.velocity = newvector.normalized * speed;
-        Debug.Log(newvector);
         Rotate();
     }
 
