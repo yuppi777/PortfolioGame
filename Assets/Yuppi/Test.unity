@@ -152,8 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0679229aa54f2204281336a8b51754e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CommpanionName: 
-  AddSceneName: 
 --- !u!4 &606476088
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc77e151dcfa2343bcd754714c32a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyName: Soyo
+  _myName: Soyo
 --- !u!65 &753715406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -890,4 +888,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc77e151dcfa2343bcd754714c32a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyName: Kichin
+  _myName: Kichin

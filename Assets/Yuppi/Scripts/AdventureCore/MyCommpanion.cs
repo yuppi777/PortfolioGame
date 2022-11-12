@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MyCommpanion : MonoBehaviour
 {
-    public string MyName;
+    public string MyName => _myName;
+
+    [SerializeField]
+    private string _myName;
+
+
 
 }

@@ -18,22 +18,21 @@ public class AdventureCore :MonoBehaviour
     }
     private void Start()
     {
-        selectCommpanion.CommpanionSelect(NowCommpanionName);
+        selectCommpanion.SelifData(NowCommpanionName);
 
-        Debug.Log(NowCommpanionName);
+        //Debug.Log(NowCommpanionName);
 
 
-        if (selectCommpanion.NowCommpanionSerif != null)
-        {
-            Debug.Log("ê¨å˜");
+        //if (selectCommpanion.NowCommpanionSerif != null)
+        //{
+        //    Debug.Log("ê¨å˜");
 
-        }
+        //}
 
        CSVRoader.CSVRoad(selectCommpanion.NowCommpanionSerif);
         StartCoroutine(CSVRoader.TextView());
     }
 
   
-
 
 }

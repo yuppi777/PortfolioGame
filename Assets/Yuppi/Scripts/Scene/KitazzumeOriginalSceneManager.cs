@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class KitazzumeOriginalSceneManager : SingletonMonoBehaviour<KitazzumeOriginalSceneManager>
 {
-    public string CommpanionName;
-    public string AddSceneName;
+    
     
     public void SceneAdd(string scenename)
     {
@@ -18,4 +17,8 @@ public class KitazzumeOriginalSceneManager : SingletonMonoBehaviour<KitazzumeOri
         SceneManager.UnloadSceneAsync(scenename);
     }
     
+    public void SceneChange(string scenename)
+    {
+        SceneManager.LoadScene(scenename);
+    }
 }
