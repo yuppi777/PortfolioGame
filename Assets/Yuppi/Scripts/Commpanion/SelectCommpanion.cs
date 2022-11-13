@@ -12,10 +12,10 @@ public class SelectCommpanion : MonoBehaviour,ICommpanion
 
     //public void CommpanionSelect( string nowCommpanionName)
     //{
-       
+          
     //}
 
-  
+   
 
     public void SelifData(string nowCommpanionName)
     {
