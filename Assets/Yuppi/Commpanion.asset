@@ -18,6 +18,10 @@ MonoBehaviour:
     CsvFile: {fileID: 4900000, guid: 7a0e02e82af735e4aa76176ad8ec9d23, type: 3}
     Post: 1
   - Name: Soyo
-    sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
+    sprite: {fileID: 21300000, guid: b4df566fc8553f54e8960e62cc6a7243, type: 3}
     CsvFile: {fileID: 4900000, guid: cec53de06621d834fb75cd9e222b6729, type: 3}
+    Post: 2
+  - Name: Yuuga
+    sprite: {fileID: 21300000, guid: 7fc13ec576438734eb4c309673fbd311, type: 3}
+    CsvFile: {fileID: 4900000, guid: f78bda962872c1e40ae5de24fca5cb8b, type: 3}
     Post: 2

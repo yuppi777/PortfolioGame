@@ -11,8 +11,8 @@ public class CSVRoader : MonoBehaviour
     [SerializeField] private Text TextViewer;
     //[SerializeField] private TextAsset CsvFile;
     [SerializeField] private Text NameTextViewer;
+    [SerializeField] private Image NowCommpanionFace;
 
-    //[SerializeField] private GameObject Adbentya;
     List<string[]> CsvDate = new List<string[]>();
     int TextKey = 0;
     public string ToScene;
@@ -57,19 +57,19 @@ public class CSVRoader : MonoBehaviour
             yield return null;
         }
         KitazzumeOriginalSceneManager.Instance.SceneUnloadAddtive("TestScene");
-        FalseAdventya();
+       
         
     }
-
+    public void SetFace(Sprite nowcommpanionface)
+    {
+        NowCommpanionFace.sprite = nowcommpanionface;
+    }
 
    public void TextUpdate()
     {
         TextKey += 1;
     }
 
-   public void FalseAdventya()
-    {
-        //Adbentya.SetActive(false);
-    }
+  
    
 }

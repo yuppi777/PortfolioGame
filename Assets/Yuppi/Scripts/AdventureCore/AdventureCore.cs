@@ -19,18 +19,20 @@ public class AdventureCore :MonoBehaviour
     private void Start()
     {
         selectCommpanion.SelifData(NowCommpanionName);
+        
 
         //Debug.Log(NowCommpanionName);
-
-
         //if (selectCommpanion.NowCommpanionSerif != null)
         //{
         //    Debug.Log("ê¨å˜");
 
         //}
+       CSVRoader.SetFace(selectCommpanion.NowCommpanionFace);
 
        CSVRoader.CSVRoad(selectCommpanion.NowCommpanionSerif);
         StartCoroutine(CSVRoader.TextView());
+        
+
     }
 
   

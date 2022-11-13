@@ -8,31 +8,22 @@ public class SelectCommpanion : MonoBehaviour,ICommpanion
 {
    
     [SerializeField] CommpanionMaster data;
-    public TextAsset NowCommpanionSerif;
+    public TextAsset NowCommpanionSerif => nowcommpanionserif ;
+    private TextAsset nowcommpanionserif;
+    public Sprite NowCommpanionFace => nowcommpanionface;
+    private Sprite nowcommpanionface;
 
-    //public void CommpanionSelect( string nowCommpanionName)
-    //{
-       
-    //}
-
-  
 
     public void SelifData(string nowCommpanionName)
     {
          var query = data.sheet;
-        if (nowCommpanionName == "Kichin")
-        {
-           var nowCommpanionSerif = query.Where(x => x.Name == "Kichin").First();
-            NowCommpanionSerif = nowCommpanionSerif.CsvFile;
-        }
-        if (nowCommpanionName == "Soyo")
-        {
-           
-            var nowCommpanionSerif = query.Where(x => x.Name == "Soyo").First();
-            NowCommpanionSerif = nowCommpanionSerif.CsvFile;
-
-        }
-     
+        
+           var nowCommpanionData = query.Where(x => x.Name == nowCommpanionName).First();
+            nowcommpanionserif = nowCommpanionData.CsvFile;
+            nowcommpanionface = nowCommpanionData.sprite;
+        
         
     }
 }
+
+
